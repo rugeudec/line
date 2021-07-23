@@ -1,0 +1,108 @@
+<html dir="ltr" lang="en_US" data-lang="en_US">
+<head>
+  <!-- PC -->
+  <meta charset="UTF-8">
+  <meta property="og:title" content="LINE Login">
+  <meta property="og:description" content="Log in to Test the login test">
+  <meta property="og:image" content="https://line.me/favicon.ico">
+  <title>LINE</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://scdn.line-apps.com/n/line_lp/img/favicon.ico">
+  <link rel="stylesheet" href="https://scdn.line-apps.com/n/line_web_login/css/line_web_login_1548918449.css">
+  <!--[if lt IE 9]><script src="https://scdn.line-apps.com/n/line_web_login/js/html5_1548918449.js"></script><![endif]-->
+  <script src="https://scdn.line-apps.com/n/line_web_login/js/lc.line.web.login.common_1548918449.js"></script>
+</head>
+<body>
+<div class="LyWrap">
+  <div class="ArLoginWrap">
+    <h1 class="MdGHD1Logo">LINE</h1>
+    <div class="arLoginWrapInner">
+      <div class="MdMN01LoginForm">
+        <form action="/dialog/oauth/authenticate" method="post">
+          <input type="hidden" name="sessionId" id="sessionId" value="" />
+          <input type="hidden" name="userId" id="userId" value="" />
+          <input type="hidden" name="encUserId" id="encUserId" value="" />
+          <input type="hidden" name="id" id="rsaKeyName" value="" />
+          <input type="hidden" name="password" id="ipt_login_param_encrypt" value="" />
+          <input type="hidden" name="idProvider" id="idProvider" value="" />
+          <input class="pincodeParam" type="hidden" name="response_mode" id="responseMode" value="" />
+          <input class="pincodeParam" type="hidden" name="otpId" id="otpId" value="" />
+          <input class="pincodeParam" type="hidden" name="scope" id="scope" value="" />
+            <input type="hidden" name="response_type" id="responseType" value="code" />
+            <input class="pincodeParam" type="hidden" name="client_id" id="channelId" value="1502612786" />
+            <input class="pincodeParam" type="hidden" name="redirect_uri" id="redirectUrl" value="https://web-login-test.herokuapp.com/auth" />
+          <input type="hidden" name="displayType" value="b" />
+          <input type="hidden" name="noautoLogin" value="false" />
+          <input class="pincodeParam" type="hidden" name="state" id="state" value="ZyeuB_NdTHXQJtrEeXFegzJpckPQjOBb3l3GZ9PLHnM" />
+          <input type="hidden" name="forceSecondVerification" id="forceSecondVerification" value="" />
+          <input class="pincodeParam" type="hidden" name="showPermissionApproval" id="showPermissionApproval" value="" />
+          <input type="hidden" name="captchaKey" id="captchaKey" value="9Mxn9qm5v4iktu1kWzx2n6spCTE8zMwynLsVYf3RsNe" />
+
+          <div class="MdLYR05Wrap MdNonDisp">
+            <a href="#" class="MdBtn01Close02">Close</a>
+            <p class="mdLYR05Desc">You can view your account info by opening your LINE app and going to Settings > Account.</p>
+          </div>
+          <div class="MdInputTxt01 mdInputTxt01Mail">
+            <input type="text" id="id" name="tid" class="" placeholder="Email address" />
+            <span type="button" class="MdBtn01Help">Help</span>
+          </div>
+          <div class="MdInputTxt01">
+            <input type="password" id="passwd" name="tpasswd" class="" placeholder="Password" />
+          </div>
+
+          <div class="mdMN01Btn">
+            <input type="submit" class="MdBtn03Login" value="Log in" disabled>
+          </div>
+        </form>
+      </div>
+      <div class="MdMN02Msg">
+        <p class="mdMN02Txt">
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="LyFoot" role="contentinfo">
+    <p class="MdGFT02Link">
+      <a href="http://line.me" target="_blank">About LINE</a>
+    </p>
+    <p class="MdGFT01Copy">
+      <small>&copy; LINE Corporation</small>
+    </p>
+  </footer>
+</div>
+
+
+<!--SCRIPT-->
+<script src="https://scdn.line-apps.com/n/line_web_login/js/lc.line.web.login_1548918449.js"></script>
+<script>
+  var message = {
+    "001": "Invalid email address.",
+    "002": "Unable to log in.<br />Please try again later.",
+    "003": "Required information missing.",
+    "004": "Invalid password."
+  };
+
+  lc.line.web.login.init({
+    lineRsaUrl: "https://access.line.me/authct/v1/keys/line",
+    naverRsaUrl: "https://access.line.me/authct/v1/keys/naver",
+    captchaUrl: "https://access.line.me/dialog/captcha/9Mxn9qm5v4iktu1kWzx2n6spCTE8zMwynLsVYf3RsNe",
+    pinCodeUrl: "",
+    verifier: "",
+    errorMsg: "Unable to log in now.<br />Please try again later.",
+    isPermittedNaverLogin : true,
+    openAuthtSessionUrl: "https://access.line.me/dialog/v2/autht/session",
+    probeIdProviderUrl: "https://access.line.me/dialog/v2/autht/idProvider",
+    issueConnectKeyUrl: "https://access.line.me/dialog/v2/autht/connect/key",
+    isUsingVaeLogic: false
+  });
+</script>
+<!--/SCRIPT-->
+
+<script>
+  var lap_optout_check_api_url = "https://optout-api.tr.line.me/enabled";
+</script>
+
+<script src="https://static.line-scdn.net/line_web_login/17aa8602ce7/dist/lap_optout_check.min.js"></script>
+
+</body>
+</html>
